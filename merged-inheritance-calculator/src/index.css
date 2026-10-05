@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+  --font-naskh: "Noto Naskh Arabic", serif;
+  --font-latin: "Inter", system-ui, sans-serif;
+  --font-amiri: "Amiri", serif;
+  --color-ink-50: #f2f8f5;
+  --color-ink-900: #06251c;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f5f7f6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-ur {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  line-height: 2.1;
+}
+
+.font-en {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Elegant islamic pattern */
+.pattern-geo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.14' stroke-width='1'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Cpath d='M30 12 L48 30 L30 48 L12 30 Z'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-soft {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23065f46' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5d0;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+}
+.animate-bar {
+  animation: growBar 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+}
